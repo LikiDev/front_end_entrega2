@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({ onLogoClick }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="#" onClick={onLogoClick}>

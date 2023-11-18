@@ -18,7 +18,7 @@ const Post = ({ createdAt, author, text, comments, image }) => {
                     <small className="text-muted">{createdAt.toLocaleString()}</small>
                     <div className="interactions">
                         {/* Botón de Me Gusta */}
-                        <button className="like-button" onClick={handleLike}>
+                            <button className="like-button" onClick={handleLike}>
                             <i className="bi bi-heart"></i> {likes}
                         </button>
                         <span>

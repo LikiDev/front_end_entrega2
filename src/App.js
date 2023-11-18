@@ -6,6 +6,12 @@ import Profile from './components/Profile/Profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+const normalizeDate = (dateString) => {
+  const parts = dateString.split('/');
+  // Asegúrate de que la fecha se normalice correctamente
+  return new Date(parts[2], parts[1] - 1, parts[0]);
+};
+
 function App() {
   const [search, setSearch] = useState('');
   const [posts, setPosts] = useState([]);
@@ -17,27 +23,27 @@ function App() {
   {
       id: 1,
       author: '@autor1',
-      date: '1 de Enero, 2023',
+      date: normalizeDate('1/1/2021'),
       image: '/imgs/img1.jpg',
-      description: 'Descripción del post 1',
+      text: 'antonio andres alvaro alberto enrique',
       likes: 150,
       commentsNumber: 30
   },
   {
       id: 2,
       author: '@autor2',
-      date: '2 de Febrero, 2023',
+      date: normalizeDate('2/2/2022'),
       image: '/imgs/img2.jpg',
-      description: 'Descripción del post 2',
+      text: 'beatriz borja belen benjamin enrique fran',
       likes: 250,
       commentsNumber: 50
   },
   {
       id: 3,
       author: '@autor3',
-      date: '3 de Marzo, 2023',
+      date: normalizeDate('3/3/2023'),
       image: '/imgs/img3.jpg',
-      description: 'Descripción del post 3',
+      text: 'carlos cristina carmen cintia fran',
       likes: 350,
       commentsNumber: 70
   }
