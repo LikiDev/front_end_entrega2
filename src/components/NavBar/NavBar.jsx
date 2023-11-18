@@ -1,4 +1,3 @@
-// NavBar.jsx
 import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './NavBar.css';

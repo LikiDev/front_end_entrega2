@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './Post.css'; // Asegúrate de tener tus estilos aquí
+import './Post.css';
 
 const Post = ({ createdAt, author, text, comments, image }) => {
     const [likes, setLikes] = useState(0);
 
     const handleLike = () => {
-        setLikes(likes + 1); // Incrementa los likes en 1 cada vez que se hace clic
+        setLikes(likes + 1);
     };
 
     return (
